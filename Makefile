@@ -10,8 +10,6 @@ init:
 	$(PIP) install -e .[dev] --quiet
 	@$(PRE_COMMIT) install
 	@$(PRE_COMMIT) autoupdate
-	chmod +x .git/hooks/pre-commit
-	opencommit hook set
 
 upgrade:
 	$(PIP) install --upgrade pip
